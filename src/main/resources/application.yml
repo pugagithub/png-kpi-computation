@@ -1,0 +1,33 @@
+server:
+    port: 8080
+    servlet:
+      context-path: /kpicomputation
+
+spring:
+  jmx:
+    enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/png_kpi_computation
+    host: localhost
+    port: 5432
+    username: png
+    password: png
+  jpa:
+    showSql: true
+    formatSql: true
+    hibernate:
+      ddlAuto: none
+      namingStrategy : org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+      physicalNamingStrategy : com.png.kpicomputation.utils.CustomPhysicalNamingStrategyImpl
+      dialect: org.hibernate.dialect.PostgreSQL95Dialect
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+
+
+
+
+

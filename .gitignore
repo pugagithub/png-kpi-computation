@@ -1,0 +1,31 @@
+### Git ###
+*.orig
+
+# IntelliJ
+.idea/
+out/
+*.iml
+
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+/logs/**
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Gradle ###
+.gradle
+**/build/
+
+
+.DS_Store
