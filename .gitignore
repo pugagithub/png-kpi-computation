@@ -26,6 +26,6 @@ out/
 ### Gradle ###
 .gradle
 **/build/
-
+gradle/
 
 .DS_Store
