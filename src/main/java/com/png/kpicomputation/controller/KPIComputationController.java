@@ -13,7 +13,8 @@ public class KPIComputationController {
 
     @RequestMapping("/kpi")
     public String index() {
-
+        System.out.println("Hello World");
         return "Greetings from KPI Computation Service : "+  userService.getUserLastName("Pugal");
+
     }
 }
