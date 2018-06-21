@@ -1,7 +1,7 @@
 pipeline {
     agent { docker {
     image 'maven:3.3.3'
-    customWorkspace '/tmp/myjenkinsworkspace'
+    customWorkspace '/Users/spugazhendhi/myjenkins_workspace'
   } }
     stages {
         stage('build') {
