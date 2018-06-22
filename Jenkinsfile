@@ -1,6 +1,6 @@
 pipeline {
     agent { docker {
-    image 'maven:latest'
+    image 'centos'
   } }
     stages {
         stage('build') {
