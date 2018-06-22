@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sudo sh 'echo "Hello World"'
+                 sh 'sudo echo "Hello World"'
             }
         }
     }
