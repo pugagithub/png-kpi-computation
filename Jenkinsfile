@@ -1,12 +1,12 @@
 pipeline {
     agent { docker {
-    image 'centos'
+   image 'maven:3.3.3'
   } }
     stages {
         stage('build') {
             steps {
-                sh 'sudo /etc/init.d/apparmor stop'
-                sh 'sudo update-rc.d -f apparmor remove'
+                sh 'mvn --version'
+
             }
         }
     }
