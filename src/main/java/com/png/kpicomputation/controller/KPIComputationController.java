@@ -12,9 +12,9 @@ public class KPIComputationController {
     UserService userService;
 
     @RequestMapping("/kpi")
-    public String index() {
+    public void index() {
         System.out.println("Hello World");
-        return "Greetings from KPI Computation Service : "+  userService.getUserLastName("Pugal");
+        //return "Greetings from KPI Computation Service : "+  userService.getUserLastName("Pugal");
 
     }
 }
