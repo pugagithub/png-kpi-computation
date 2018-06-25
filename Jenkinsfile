@@ -4,7 +4,7 @@ pipeline {
         stage('No-op') {
             steps {
                 script {
-                    sh 'ls'
+                    sh 'echo "New Hello Worls" '
                 }
             }
         }
@@ -12,21 +12,18 @@ pipeline {
     post {
         always {
             echo 'One way or another, I have finished'
-            deleteDir() /* clean up our workspace */
+
         }
         success {
-             mail to: 'pugal.sym@gmail.com',
-                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                  body: "Build Successful : Build Numbe : ${env.BUILD_URL}"
+           echo 'I am success :/'
 
         }
         unstable {
             echo 'I am unstable :/'
         }
         failure {
-           mail to: 'pugal.sym@gmail.com',
-                subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                body: "Something is wrong with ${env.BUILD_URL}"
+           echo 'I am failure :/'
+
         }
         changed {
             echo 'Things were different before...'
