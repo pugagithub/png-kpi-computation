@@ -10,10 +10,10 @@ import static org.junit.Assert.*;
 public class KPIComputationControllerTest {
 
     @Test
-    public void multiplicationOfZeroIntegersShouldReturnZero() {
+    public void dummyTest() {
         KPIComputationController controller = new KPIComputationController();
 
-       assertEquals(3,controller.forUnitTesting());
+       assertEquals(2,controller.forUnitTesting());
     }
 
 }
