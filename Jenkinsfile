@@ -1,16 +1,30 @@
-
 pipeline {
     agent any
     stages {
-        stage('Test') {
+        stage('No-op') {
             steps {
-                sh './gradlew clean test'
+                sh 'ls'
             }
         }
     }
     post {
         always {
-            junit 'build/test-results/**/*.xml'
+            echo 'One way or another, I have finished'
+            deleteDir() /* clean up our workspace */
+        }
+        success {
+            echo 'I succeeeded!'
+        }
+        unstable {
+            echo 'I am unstable :/'
+        }
+        failure {
+           mail to: 'pugal.sym@gmail.com',
+                subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                body: "Something is wrong with ${env.BUILD_URL}"
+        }
+        changed {
+            echo 'Things were different before...'
         }
     }
 }
