@@ -17,4 +17,8 @@ public class KPIComputationController {
         //return "Greetings from KPI Computation Service : "+  userService.getUserLastName("Pugal");
 
     }
+
+    public int forUnitTesting() {
+        return 3;
+    }
 }
