@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('No-op') {
             steps {
-                sh 'ls'
+                script {
+                    sh 'ls'
+                }
             }
         }
     }
@@ -16,6 +18,7 @@ pipeline {
              mail to: 'pugal.sym@gmail.com',
                   subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
                   body: "Build Successful : Build Numbe : ${env.BUILD_URL}"
+
         }
         unstable {
             echo 'I am unstable :/'
